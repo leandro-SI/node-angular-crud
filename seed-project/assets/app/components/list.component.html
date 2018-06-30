@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Mensagens Salvas</h4>
+        <hr>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mensagem</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let message of messages">
+                    <td>{{message._id}}</td>
+                    <td>{{message.name}}</td>
+                    <td> <button class="btn btn-danger" (click)="doDelete(message)" >Delete</button> 
+                        <button class="btn btn-primary" (click)="doUpdate(message)" >Update</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
